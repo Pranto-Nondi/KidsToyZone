@@ -141,10 +141,7 @@ const Login = () => {
                                 <div className="grid h-20  flex-grow card rounded-box place-items-center bg-base-200 container mx-auto ">
                                     <Link onClick={handelGoogleSign} > Google Sign In</Link>
                                 </div>
-                                {/* <div className="divider divider-horizontal">OR</div>
-                                <div className="grid h-20 flex-grow card  rounded-box place-items-center ">
-                                    <Link onClick={handelGithubSign} > Github Sign In</Link>
-                                </div> */}
+                               
                             </div>
                         </div>
                     </div>
