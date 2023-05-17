@@ -100,58 +100,65 @@ const Register = () => {
     }
 
     return (
-        <div>
-            <div className="hero  bg-base-200">
-                <div className="hero-content w-full flex-col ">
-                    <div className="text-center lg:text-left">
-                        <h1 className="text-5xl font-bold">Register now!</h1>
+       
+        <div className='container mb-5 mt-5 mx-auto'>
+            <div className="hero bg-base-200">
+                <div className="hero-content min-h-screen flex-col lg:flex-row">
+                    <div className="lg:w-[50%]">
+                        <img src="https://midoshriks-school.netlify.app/assets/sing/imgs/login-form-img.png" alt="Registration Image" className="w-full h-full object-cover" />
                     </div>
+                    <div className="lg:w-[50%]">
+                        <div className="text-center ">
+                            <h1 className="text-5xl mb-2 font-semibold">Register now</h1>
+                        </div>
 
-                    <div className="card  flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-                        <form onSubmit={handleRegister} className="card-body">
-                            <div className="form-control">
-                                <label className="label">
-                                    <span className="label-text">Name</span>
-                                </label>
-                                <input ref={nameRef} type="text" name='name' placeholder="Name" className="input input-bordered" required />
-                            </div>
-                            <div className="form-control">
-                                <label className="label">
-                                    <span className="label-text">Photo URL</span>
-                                </label>
-                                <input ref={urlRef} type="text" name='photoUrl' placeholder="photoUrl" className="input input-bordered" required />
-                            </div>
-                            <div className="form-control">
-                                <label className="label">
-                                    <span className="label-text">Email</span>
-                                </label>
-                                <input onChange={handelEmailField} type="email" name='email' placeholder="email" className="input input-bordered" required />
-                                {emailError && <><span className='text-red-500'> {emailError}</span></>}
-                            </div>
-                            <div className="form-control">
-                                <label className="label">
-                                    <span className="label-text">Password</span>
-                                </label>
-                                <input onChange={handelPasswordField} type="password" name='password' placeholder="password" className="input input-bordered" required />
-                                {passwordError && <><span className='text-red-500'> {passwordError}</span></>}
-
-                            </div>
-                            <div className="form-control mt-6">
-                                <button className="btn btn-primary">Register</button>
-                            </div>
-                            <div>
-                                <p className='text-center mt-3 text-red-500 mb-5' > {error} </p>
-                            </div>
-                            <p className='mb-4  text-center '>
-                                <Link to="/login" className="label-text-alt link link-hover ">
-                                    Have An Account ? <span className='text-green-600'>Please Login</span>
-                                </Link>
-                            </p>
-                        </form>
+                        <div className="card flex-shrink-0 w-full max-w-md shadow-2xl bg-base-100">
+                        
+                            <form onSubmit={handleRegister} className="card-body">
+                                <div className="form-control">
+                                    <label className="label">
+                                        <span className="label-text">Name</span>
+                                    </label>
+                                    <input ref={nameRef} type="text" name='name' placeholder="Name" className="input input-bordered" required />
+                                </div>
+                                <div className="form-control">
+                                    <label className="label">
+                                        <span className="label-text">Photo URL</span>
+                                    </label>
+                                    <input ref={urlRef} type="text" name='photoUrl' placeholder="Photo URL" className="input input-bordered" required />
+                                </div>
+                                <div className="form-control">
+                                    <label className="label">
+                                        <span className="label-text">Email</span>
+                                    </label>
+                                    <input onChange={handelEmailField} type="email" name='email' placeholder="Email" className="input input-bordered" required />
+                                    {emailError && <span className='text-red-500'>{emailError}</span>}
+                                </div>
+                                <div className="form-control">
+                                    <label className="label">
+                                        <span className="label-text">Password</span>
+                                    </label>
+                                    <input onChange={handelPasswordField} type="password" name='password' placeholder="Password" className="input input-bordered" required />
+                                    {passwordError && <span className='text-red-500'>{passwordError}</span>}
+                                </div>
+                                <div className="form-control mt-6">
+                                    <button className="btn btn-primary">Register</button>
+                                </div>
+                                <div>
+                                    <p className='text-center mt-3 text-red-500 mb-5'>{error}</p>
+                                </div>
+                                <p className='mb-4 text-center'>
+                                    <Link to="/login" className="label-text-alt link link-hover">
+                                        Already have an account? <span className='text-green-600'>Please login</span>
+                                    </Link>
+                                </p>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+
     );
 };
 
