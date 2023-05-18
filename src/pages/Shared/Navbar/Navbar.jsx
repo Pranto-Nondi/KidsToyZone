@@ -23,7 +23,7 @@ const Navbar = () => {
         <li className='pb-2 pl-2'><Link  >All Toys</Link></li>
         {
             user && !loading && <>
-                <li className='pb-2 pl-2'><Link  >My Toys</Link></li>
+                <li className='pb-2 pl-2'><Link to='/myToys'  >My Toys</Link></li>
                 <li className='pb-2 pl-2'><Link to='/addToy' >Add A Toy</Link></li>
             </>
         }

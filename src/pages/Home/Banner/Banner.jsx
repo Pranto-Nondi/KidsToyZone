@@ -22,7 +22,7 @@ const Banner = () => {
         const slideInterval = () => {
             timer = setTimeout(() => {
                 slides[currentIndex].classList.remove('active');
-                slideButtons[currentIndex].classList.remove('show');
+                slideButtons[currentIndex].classList?.remove('show');
                 currentIndex = (currentIndex + 1) % slides.length;
                 slides[currentIndex].classList.add('active');
                 slideButtons[currentIndex].classList.add('show');

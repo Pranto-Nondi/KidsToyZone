@@ -6,7 +6,7 @@ const AddToyPage = () => {
         pictureUrl: '',
         name: '',
         sellerName: '',
-        sellerEmail: '',
+        email: '',
         subcategory: '',
         price: '',
         rating: '',
@@ -27,12 +27,26 @@ const AddToyPage = () => {
         // Perform the submission logic here
         // You can access the form data using the toyData state object
         console.log(toyData);
+        fetch(`http://localhost:5000/addToys`, {
+            method: "POST",
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(toyData)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                if (data.insertedId) {
+                    alert('service book successfully')
+                }
+            })
         // Reset the form fields
         setToyData({
             pictureUrl: '',
             name: '',
             sellerName: '',
-            sellerEmail: '',
+            email: '',
             subcategory: '',
             price: '',
             rating: '',
@@ -78,25 +92,29 @@ const AddToyPage = () => {
                     />
                 </div>
                 <div>
-                    <label htmlFor="sellerEmail" className="block font-semibold text-lg mb-2">Seller Email:</label>
+                    <label htmlFor="email" className="block font-semibold text-lg mb-2">Seller Email:</label>
                     <input
                         type="email"
-                        id="sellerEmail"
-                        value={toyData.sellerEmail}
+                        id="email"
+                        value={toyData.email}
                         onChange={handleChange}
                         className="border border-gray-300 p-2 w-full"
                     />
                 </div>
                 <div>
                     <label htmlFor="subcategory" className="block font-semibold text-lg mb-2">Sub-category:</label>
-                    <input
-                        type="text"
+                    <select
                         id="subcategory"
                         value={toyData.subcategory}
                         onChange={handleChange}
                         className="border border-gray-300 p-2 w-full"
                         required
-                    />
+                    >
+                        <option value="">Select a subcategory</option>
+                        <option value="subcategory1">Subcategory 1</option>
+                        <option value="subcategory2">Subcategory 2</option>
+                        <option value="subcategory3">Subcategory 3</option>
+                    </select>
                 </div>
                 <div>
                     <label htmlFor="price" className="block font-semibold text-lg mb-2">Price:</label>
@@ -153,4 +171,5 @@ const AddToyPage = () => {
 };
 
 export default AddToyPage;
+
 
