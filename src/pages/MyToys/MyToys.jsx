@@ -1,8 +1,9 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { RotatingLines } from 'react-loader-spinner';
-import MyToysLIst from './MyToysLIst';
+
 import { AuthContext } from '../../povider/AuthProvider';
+import MyToysList from './MyToysLIst';
 
 
 const MyToys = () => {
@@ -83,35 +84,30 @@ const MyToys = () => {
     console.log(myToys)
     return (
 
-        <div>
+        <div className="container mx-auto mt-5 px-2 py-8">
+            <h1 className="text-2xl text-center font-bold mb-4">My Toys</h1>
             <div className="overflow-x-auto">
-                <table className="table w-full">
+                <table className="table w-full border border-gray-300">
                     <thead>
                         <tr>
-
-                            <th>No</th>
-                            <th>Image</th>
-                            <th>Name</th>
-                            <th>seller name</th>
-                            <th>seller email</th>
-                            <th>Price</th>
-                            <th>Rating</th>
-                            <th>Available quantity</th>
-                            <th>Sub-category</th>
-                            <th>Detail description</th>
-                            <th>Edit</th>
-                            <th>Action</th>
+                            <th className="py-2">No</th>
+                            <th className="py-2">Image</th>
+                            <th className="py-2">Name</th>
+                            <th className="py-2">Seller Name</th>
+                            <th className="py-2">Seller Email</th>
+                            <th className="py-2">Price</th>
+                            <th className="py-2">Rating</th>
+                            <th className="py-2">Quantity</th>
+                            <th className="py-2">Sub-category</th>
+                            <th className="py-2">Description</th>
+                            <th className="py-2">Edit</th>
+                            <th className="py-2">Actions</th>
                         </tr>
                     </thead>
                     <tbody>
-                        {
-                            myToys?.map(toy => <MyToysLIst key={toy._id}
-                                toy={toy}>
-
-
-                            </MyToysLIst>)
-                        }
-
+                        {myToys?.map((toy, index) => (
+                            <MyToysList key={toy._id} toy={toy} index={index} />
+                        ))}
                     </tbody>
                 </table>
             </div>
