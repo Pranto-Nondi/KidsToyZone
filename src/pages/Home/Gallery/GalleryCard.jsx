@@ -6,11 +6,8 @@ const GalleryCard = ({ toy }) => {
     const [isHovered, setIsHovered] = useState(false);
 
     useEffect(() => {
-        const hoverTimeout = setTimeout(() => {
-            setIsHovered(true);
-        }, 2000);
+        setIsHovered(true);
 
-        return () => clearTimeout(hoverTimeout);
     }, []);
 
     const handleHover = () => {
