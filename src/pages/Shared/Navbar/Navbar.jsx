@@ -24,7 +24,7 @@ const Navbar = () => {
         {
             user && !loading && <>
                 <li className='pb-2 pl-2'><Link  >My Toys</Link></li>
-                <li className='pb-2 pl-2'><Link  >Add A Toy</Link></li>
+                <li className='pb-2 pl-2'><Link to='/addToy' >Add A Toy</Link></li>
             </>
         }
 
