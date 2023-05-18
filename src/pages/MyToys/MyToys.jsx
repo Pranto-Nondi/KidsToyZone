@@ -84,10 +84,10 @@ const MyToys = () => {
     console.log(myToys)
     return (
 
-        <div className="container mx-auto mt-5 px-2 py-8">
-            <h1 className="text-2xl text-center font-bold mb-4">My Toys</h1>
+        <div >
+            <h1 className="text-2xl text-center font-bold  mb-4 ">My Toys</h1>
             <div className="overflow-x-auto">
-                <table className="table w-full border border-gray-300">
+                <table className="table w-[80%] mx-auto container border border-gray-300">
                     <thead>
                         <tr>
                             <th className="py-2">No</th>

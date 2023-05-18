@@ -1,12 +1,18 @@
-
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
+import { AuthContext } from '../../povider/AuthProvider';
 
 const AddToyPage = () => {
+    const { user } = useContext(AuthContext);
+
+
+    const defaultSellerName = user?.displayName || '';
+    const defaultEmail = user?.email || '';
+
     const [toyData, setToyData] = useState({
         pictureUrl: '',
         name: '',
-        sellerName: '',
-        email: '',
+        sellerName: defaultSellerName,
+        email: defaultEmail,
         subcategory: '',
         price: '',
         rating: '',
@@ -24,9 +30,7 @@ const AddToyPage = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Perform the submission logic here
-        // You can access the form data using the toyData state object
-        console.log(toyData);
+
         fetch(`http://localhost:5000/addToys`, {
             method: "POST",
             headers: {
@@ -36,17 +40,17 @@ const AddToyPage = () => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data)
+                console.log(data);
                 if (data.insertedId) {
-                    alert('service book successfully')
+                    alert('Service booked successfully');
                 }
-            })
-        // Reset the form fields
+            });
+
         setToyData({
             pictureUrl: '',
             name: '',
-            sellerName: '',
-            email: '',
+            sellerName: defaultSellerName,
+            email: defaultEmail,
             subcategory: '',
             price: '',
             rating: '',
@@ -57,7 +61,7 @@ const AddToyPage = () => {
 
     return (
         <div className="container w-[60%] mx-auto p-4">
-            <h1 className="text-4xl font-semibold">Add A Toy</h1>
+            <h1 className="text-4xl text-center font-semibold">Add A Toy</h1>
             <form onSubmit={handleSubmit} className="mt-4 grid grid-cols-2 gap-4">
                 <div>
                     <label htmlFor="pictureUrl" className="block font-semibold text-lg mb-2">Picture URL:</label>
@@ -88,6 +92,8 @@ const AddToyPage = () => {
                         id="sellerName"
                         value={toyData.sellerName}
                         onChange={handleChange}
+                        defaultValue={defaultSellerName}
+                        readOnly
                         className="border border-gray-300 p-2 w-full"
                     />
                 </div>
@@ -98,6 +104,8 @@ const AddToyPage = () => {
                         id="email"
                         value={toyData.email}
                         onChange={handleChange}
+                        defaultValue={defaultEmail}
+                        readOnly
                         className="border border-gray-300 p-2 w-full"
                     />
                 </div>
@@ -171,5 +179,3 @@ const AddToyPage = () => {
 };
 
 export default AddToyPage;
-
-

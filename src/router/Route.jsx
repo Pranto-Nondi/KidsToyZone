@@ -6,6 +6,7 @@ import Register from "../pages/Register/Register"
 import ErrorPage from "../pages/ErrorPage/ErrorPage"
 import AddToyPage from "../pages/AddToyPage/AddToyPage"
 import MyToys from "../pages/MyToys/MyToys"
+import AllToyPage from "../pages/AllToyPage/AllToyPage"
 
 const router = createBrowserRouter([
     {
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
             {
                 path: '/myToys',
                 element: <MyToys />
+            },
+            {
+                path: '/allToys',
+                element: <AllToyPage />
             }
 
         ]

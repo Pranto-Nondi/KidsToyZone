@@ -20,7 +20,7 @@ const Navbar = () => {
     const navItems = <>
         <li className='pb-2 pl-2'><Link to='/'> Home</Link></li>
         <li className='pb-2 pl-2'><Link  >Blogs</Link></li>
-        <li className='pb-2 pl-2'><Link  >All Toys</Link></li>
+        <li className='pb-2 pl-2'><Link to='/allToys'  >All Toys</Link></li>
         {
             user && !loading && <>
                 <li className='pb-2 pl-2'><Link to='/myToys'  >My Toys</Link></li>
