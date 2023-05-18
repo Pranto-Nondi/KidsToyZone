@@ -147,7 +147,7 @@ const Login = () => {
 
                             <div>
                                 <div className="flex w-full">
-                                    <div className="grid h-20 flex-grow card rounded-box place-items-center bg-base-200 container mx-auto bg-base-300">
+                                    <div className="grid h-20 flex-grow card rounded-box place-items-center container mx-auto ">
                                         <button onClick={handelGoogleSign} className="btn btn-accent">Sign in with Google</button>
                                     </div>
                                 </div>
