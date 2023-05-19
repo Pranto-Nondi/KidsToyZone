@@ -22,7 +22,7 @@ const AllToyPage = () => {
                 console.error("Error fetching toys:", error);
                 setLoader(false);
             });
-    }, []); // Fetch data whenever the limit changes
+    }, []);
 
     const handleSearch = () => {
         fetch(`http://localhost:5000/allToys/${searchText}`)
@@ -56,15 +56,17 @@ const AllToyPage = () => {
         <div>
             <h1 className="text-2xl text-center font-bold mb-4">All Toys</h1>
             <div className="mb-4 text-center">
-                <input
-                    onChange={(e) => setSearchText(e.target.value)}
-                    type="text"
-                    className="p-1 bg-slate-100"
-                    placeholder="Search..."
-                />
-                <button className="btn btn-sm" onClick={handleSearch}>
-                    Search
-                </button>
+                <div className="flex justify-center align-middle ">
+                    <input
+                        onChange={(e) => setSearchText(e.target.value)}
+                        type="text"
+                        className="p-1 rounded bg-slate-100 w-[20%] mr-2"
+                        placeholder="Search..."
+                    />
+                    <button className="btn btn-sm" onClick={handleSearch}>
+                        Search
+                    </button>
+                </div>
             </div>
 
 
