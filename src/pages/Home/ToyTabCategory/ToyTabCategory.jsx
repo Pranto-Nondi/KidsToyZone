@@ -5,59 +5,59 @@ import 'react-tabs/style/react-tabs.css';
 const ToyTabCategory = () => {
     const toyCategories = [
         {
-            categoryName: 'Action Figures',
+            categoryName: 'Vehicles',
             toys: [
                 {
-                    id: 1,
-                    name: 'Superhero Action Figure',
+                  
+                    name: 'Toy cars',
                     price: 9.99,
                     rating: 4.5,
-                    image: 'path/to/action-figure-1.jpg',
+                    image: 'https://i.ibb.co/cNc9Mbg/t1.jpg',
                 },
                 {
-                    id: 2,
-                    name: 'Robot Action Figure',
+                   
+                    name: 'Toy trains',
                     price: 14.99,
                     rating: 4.2,
-                    image: 'path/to/action-figure-2.jpg',
+                    image: 'https://i.ibb.co/Kq5vCmv/train1.jpg',
                 },
             ],
         },
         {
-            categoryName: 'Plush Toys',
+            categoryName: 'Sports Toys',
             toys: [
                 {
-                    id: 3,
-                    name: 'Soft Teddy Bear',
+                   
+                    name: 'Mini basketball hoop',
                     price: 12.99,
                     rating: 4.8,
-                    image: 'path/to/teddy-bear-1.jpg',
+                    image: 'https://i.ibb.co/fFwQmS6/minibasket1.jpg',
                 },
                 {
-                    id: 4,
-                    name: 'Cute Bunny Plush',
+                 
+                    name: 'Soccer ball',
                     price: 9.99,
                     rating: 4.6,
-                    image: 'path/to/bunny-plush-1.jpg',
+                    image: 'https://i.ibb.co/jGkwv3t/sport1.jpg',
                 },
             ],
         },
         {
-            categoryName: 'Building Blocks',
+            categoryName: 'Educational Toys',
             toys: [
                 {
-                    id: 5,
-                    name: 'Classic Building Blocks',
+                  
+                    name: 'Alphabet blocks',
                     price: 19.99,
                     rating: 4.7,
-                    image: 'path/to/building-blocks-1.jpg',
+                    image: 'https://i.ibb.co/60PL0CD/alp1.jpg',
                 },
                 {
-                    id: 6,
-                    name: 'Colorful Stackable Blocks',
+                   
+                    name: 'Math puzzle',
                     price: 16.99,
                     rating: 4.4,
-                    image: 'path/to/building-blocks-2.jpg',
+                    image: 'https://i.ibb.co/9ZSS2CX/pazzle2.jpg',
                 },
             ],
         },
