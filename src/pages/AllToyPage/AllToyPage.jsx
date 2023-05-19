@@ -7,7 +7,7 @@ const AllToyPage = () => {
     const [toyCollection, setToyCollection] = useState([]);
     const [loader, setLoader] = useState(false);
     const [searchText, setSearchText] = useState("");
-    const [limit, setLimit] = useState(3); // Default limit of 3
+    const [limit, setLimit] = useState(20);
 
     useEffect(() => {
         setLoader(true);
@@ -36,7 +36,7 @@ const AllToyPage = () => {
             });
     };
 
-  
+
 
     if (loader) {
         return (
@@ -67,7 +67,7 @@ const AllToyPage = () => {
                 </button>
             </div>
 
-           
+
 
             <div className="container mx-auto">
                 <div className="max-w-full overflow-hidden">
@@ -77,6 +77,7 @@ const AllToyPage = () => {
                                 <th className="py-2">No</th>
                                 <th className="py-2">Image</th>
                                 <th className="py-2">Name</th>
+                                <th className="py-2">Sub-Category</th>
                                 <th className="py-2">Seller Name</th>
                                 <th className="py-2">Price</th>
                                 <th className="py-2">Quantity</th>

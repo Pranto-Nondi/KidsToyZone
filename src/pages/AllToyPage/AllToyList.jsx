@@ -14,6 +14,7 @@ const AllToyList = ({ singleToy, index }) => {
                 </div>
                 </td>
                 <td>{name}</td>
+                <td>{subcategory}</td>
                 <td>{sellerName}</td>
                 <td>${price}</td>
                 <td>{quantity}</td>
