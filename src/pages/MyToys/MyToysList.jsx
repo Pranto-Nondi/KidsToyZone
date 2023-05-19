@@ -19,8 +19,6 @@ const MyToysList = ({ toy, index }) => {
                 <td>${price}</td>
                 <td>{rating}</td>
                 <td>{quantity}</td>
-                <td>{subcategory}</td>
-
                 <td>{description}</td>
                 <td>
                     <button className="btn btn-success btn-xs">Update</button>

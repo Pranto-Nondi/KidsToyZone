@@ -84,10 +84,10 @@ const MyToys = () => {
     console.log(myToys)
     return (
 
-        <div >
+        <div className='container  mx-auto'>
             <h1 className="text-2xl text-center font-bold  mb-4 ">My Toys</h1>
-            <div className="overflow-x-auto">
-                <table className="table w-[80%] mx-auto container border border-gray-300">
+            <div className="max-w-full overflow-hidden ">
+                <table className="table w-full border border-gray-300">
                     <thead>
                         <tr>
                             <th className="py-2">No</th>
@@ -98,7 +98,6 @@ const MyToys = () => {
                             <th className="py-2">Price</th>
                             <th className="py-2">Rating</th>
                             <th className="py-2">Quantity</th>
-                            <th className="py-2">Sub-category</th>
                             <th className="py-2">Description</th>
                             <th className="py-2">Edit</th>
                             <th className="py-2">Actions</th>
@@ -112,6 +111,11 @@ const MyToys = () => {
                 </table>
             </div>
         </div>
+       
+
+
+
+
     );
 };
 
