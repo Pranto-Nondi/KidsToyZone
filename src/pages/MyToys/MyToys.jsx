@@ -81,7 +81,7 @@ const MyToys = () => {
             />
         </div>
     }
-    console.log(myToys)
+   
     return (
 
         <div className='container  mx-auto'>
