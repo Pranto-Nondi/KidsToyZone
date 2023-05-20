@@ -43,7 +43,7 @@ const router = createBrowserRouter([
                 element: <AllToyPage />
             },
             {
-                path: '/toyTabDetails',
+                path: '/toyTabDetails/:id',
                 element: <PrivateRoute><ToyTabDetails /></PrivateRoute>
             },
             {

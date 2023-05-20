@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { RotatingLines } from 'react-loader-spinner';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 const SingleToy = () => {
     const [singleToy, setSingleToy] = useState([])
@@ -46,9 +46,9 @@ const SingleToy = () => {
                     <h2 className="text-md mb-4">Quantity: {quantity}</h2>
                     <h2 className="text-md mb-4">Description: {description}</h2>
                     <div className="flex justify-start mt-6">
-                        <button className="px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white rounded-lg">
-                            Buy Now
-                        </button>
+                        <Link to='/allToys'><button className="px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white rounded-lg">
+                            Go Back
+                        </button></Link>
                     </div>
                 </div>
             </div>

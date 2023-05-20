@@ -54,7 +54,7 @@ const ToyTabCategory = () => {
                                             </h2>
 
                                             <div className="card-actions justify-start">
-                                                <Link to='/toyTabDetails'> <button className="btn btn-outline btn-info">View Details</button></Link>
+                                                <Link to={`/toyTabDetails/${singleCategory?._id}`}> <button className="btn btn-outline btn-info">View Details</button></Link>
                                             </div>
                                         </div>
                                     </div>
@@ -88,7 +88,7 @@ const ToyTabCategory = () => {
 
                                             </h2>
                                             <div className="card-actions justify-start">
-                                                <Link to='/toyTabDetails'> <button className="btn btn-outline btn-info">View Details</button></Link>
+                                                <Link to={`/toyTabDetails/${singleCategory?._id}`}> <button className="btn btn-outline btn-info">View Details</button></Link>
                                             </div>
                                         </div>
                                     </div>
@@ -122,7 +122,7 @@ const ToyTabCategory = () => {
 
                                             </h2>
                                             <div className="card-actions justify-start">
-                                                <Link to='/toyTabDetails'> <button className="btn btn-outline btn-info">View Details</button></Link>
+                                                <Link to={`/toyTabDetails/${singleCategory?._id}`}> <button className="btn btn-outline btn-info">View Details</button></Link>
                                             </div>
                                         </div>
                                     </div>
