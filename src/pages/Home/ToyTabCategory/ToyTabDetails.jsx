@@ -10,7 +10,7 @@ const ToyTabDetails = () => {
 
     useEffect(() => {
         setLoader(true)
-        fetch(`http://localhost:5000/toyTabDetails/${id}`)
+        fetch(`https://kid-toy-site-server.vercel.app/toyTabDetails/${id}`)
             .then((res) => res.json())
             .then((data) => {
                 // console.log(data)

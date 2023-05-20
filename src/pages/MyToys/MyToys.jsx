@@ -15,7 +15,7 @@
 
 //     useEffect(() => {
 //         setLoader(true);
-//         fetch(`http://localhost:5000/myToys/${user?.email}`)
+//         fetch(`https://kid-toy-site-server.vercel.app/myToys/${user?.email}`)
 //             .then(res => res.json())
 //             .then(data => {
 //                 if (!data.error) {
@@ -38,7 +38,7 @@
 //             dangerMode: true,
 //         }).then((willDelete) => {
 //             if (willDelete) {
-//                 fetch(`http://localhost:5000/deleteToy/${id}`, {
+//                 fetch(`https://kid-toy-site-server.vercel.app/deleteToy/${id}`, {
 //                     method: "DELETE"
 //                 })
 //                     .then(res => res.json())
@@ -131,7 +131,7 @@ const MyToys = () => {
     useEffect(() => {
         setLoader(true);
         setUserEmail(user?.email); // Set the user's email
-        fetch(`http://localhost:5000/myToys/${user?.email}`)
+        fetch(`https://kid-toy-site-server.vercel.app/myToys/${user?.email}`)
             .then((res) => res.json())
             .then((data) => {
                 if (!data.error) {
@@ -154,7 +154,7 @@ const MyToys = () => {
             dangerMode: true,
         }).then((willDelete) => {
             if (willDelete) {
-                fetch(`http://localhost:5000/deleteToy/${id}`, {
+                fetch(`https://kid-toy-site-server.vercel.app/deleteToy/${id}`, {
                     method: 'DELETE',
                 })
                     .then((res) => res.json())

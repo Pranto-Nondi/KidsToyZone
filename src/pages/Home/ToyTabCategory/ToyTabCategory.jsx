@@ -10,7 +10,7 @@ const ToyTabCategory = () => {
     const [limit, setLimit] = useState(20);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/allToys?limit=${limit}`)
+        fetch(`https://kid-toy-site-server.vercel.app/allToys?limit=${limit}`)
             .then((res) => res.json())
             .then((data) => {
                 console.log("Response data:", data);

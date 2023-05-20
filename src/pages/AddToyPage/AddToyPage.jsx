@@ -31,7 +31,7 @@ const AddToyPage = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        fetch(`http://localhost:5000/addToys`, {
+        fetch(`https://kid-toy-site-server.vercel.app/addToys`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

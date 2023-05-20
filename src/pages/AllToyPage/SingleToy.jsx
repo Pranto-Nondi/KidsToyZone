@@ -9,7 +9,7 @@ const SingleToy = () => {
     const [loader, setLoader] = useState(false);
     useEffect(() => {
         setLoader(true)
-        fetch(`http://localhost:5000/allToySingleInfo/${id}`)
+        fetch(`https://kid-toy-site-server.vercel.app/allToySingleInfo/${id}`)
             .then((res) => res.json())
             .then((data) => {
                 // console.log(data)

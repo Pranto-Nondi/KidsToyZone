@@ -26,7 +26,7 @@ const MySingleToy = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        fetch(`http://localhost:5000/updateToy/${id}`, {
+        fetch(`https://kid-toy-site-server.vercel.app/updateToy/${id}`, {
             method: "PUT",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(toyData),
