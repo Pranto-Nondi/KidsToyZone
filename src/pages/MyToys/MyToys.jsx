@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { RotatingLines } from 'react-loader-spinner';
-
+import swal from 'sweetalert';
 import { AuthContext } from '../../povider/AuthProvider';
 import MyToysList from './MyToysLIst';
 
@@ -29,45 +29,36 @@ const MyToys = () => {
                 }
             });
     }, [user, navigate])
+    const handleDelete = (id) => {
+        swal({
+            title: "Are you sure You want to delete?",
+            text: "Once deleted,This Toy is  Deleted",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+        }).then((willDelete) => {
+            if (willDelete) {
+                fetch(`http://localhost:5000/deleteToy/${id}`, {
+                    method: "DELETE"
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data)
+                        if (data?.deletedCount > 0) {
+                            const remain = myToys?.filter(singleMyToy => singleMyToy._id !== id)
+                            setMyToys(remain)
+                            setLoader(false)
+                            swal("Good Job! Your toy has been deleted!", {
+                                icon: "success",
+                            });
+                        }
+                    })
+            } else {
+                swal("Toy is not deleted");
+            }
+        });
+    }
 
-    // const handleDelete = (id) => {
-    //     fetch(`https://cars-doctor-server-nine.vercel.app/bookings/${id}`, {
-    //         method: "DELETE"
-    //     })
-    //         .then(res => res.json())
-    //         .then(data => {
-    //             console.log(data)
-    //             if (data?.deletedCount > 0) {
-    //                 const remain = bookings?.filter(booking => booking._id !== id)
-    //                 setBookings(remain)
-
-    //                 setLoader(false)
-    //             }
-    //         })
-    // }
-    // const handleBookingConfirm = (id) => {
-    //     fetch(`https://cars-doctor-server-nine.vercel.app/bookings/${id}`, {
-    //         method: 'PATCH',
-    //         headers: {
-    //             'content-type': 'application/json'
-    //         },
-    //         body: JSON.stringify({ status: 'confirm' })
-    //     })
-    //         .then(res => res.json())
-    //         .then(data => {
-    //             console.log(data)
-    //             if (data?.modifiedCount > 0) {
-    //                 const remain = bookings?.filter(booking => booking._id !== id)
-    //                 const updated = bookings?.find(booking => booking._id === id)
-    //                 updated.status = 'confirm'
-    //                 console.log(updated)
-    //                 const newBookings = [updated, ...remain];
-    //                 setBookings(newBookings)
-
-    //                 setLoader(false)
-    //             }
-    //         })
-    // }
 
 
     if (loader) {
@@ -81,7 +72,7 @@ const MyToys = () => {
             />
         </div>
     }
-   
+
     return (
 
         <div className='container  mx-auto'>
@@ -105,13 +96,13 @@ const MyToys = () => {
                     </thead>
                     <tbody>
                         {myToys?.map((toy, index) => (
-                            <MyToysList key={toy._id} toy={toy} index={index} />
+                            <MyToysList key={toy._id} toy={toy} index={index} handleDelete={handleDelete} />
                         ))}
                     </tbody>
                 </table>
             </div>
         </div>
-       
+
 
 
 

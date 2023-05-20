@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const AllToyList = ({ singleToy, index }) => {
     const { _id, pictureUrl, name, sellerName, email, subcategory, price, rating, quantity, description } = singleToy;
@@ -19,7 +20,7 @@ const AllToyList = ({ singleToy, index }) => {
                 <td>${price}</td>
                 <td>{quantity}</td>
                 <td>
-                    <button className="btn btn-info btn-xs">View Details</button>
+                    <Link to='/allToySingleInfo'><button className="btn btn-info btn-xs">View Details</button></Link>
 
                 </td>
 

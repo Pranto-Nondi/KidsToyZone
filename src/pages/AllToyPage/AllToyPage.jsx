@@ -69,8 +69,6 @@ const AllToyPage = () => {
                 </div>
             </div>
 
-
-
             <div className="container mx-auto">
                 <div className="max-w-full overflow-hidden">
                     <table className="table w-full border border-gray-300">

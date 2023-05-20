@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../povider/AuthProvider';
+import swal from 'sweetalert';
 
 
 const Login = () => {
@@ -30,6 +31,7 @@ const Login = () => {
                 e.target.reset()
                 setError('')
                 setLoading(false)
+                swal("Good job!", "Login SuccessFull", "success")
 
             })
             .catch(error => {
@@ -91,7 +93,7 @@ const Login = () => {
             <div className="hero bg-base-200">
                 <div className="hero-content min-h-screen flex-col lg:flex-row">
                     <div className="md:w-[50%] lg:w-[50%]">
-                        <img src="https://midoshriks-school.netlify.app/assets/sing/imgs/login-form-img.png" alt="Registration Image" className="w-full h-full object-cover" />
+                        <img src="https://i.ibb.co/S3zYs9q/log.png" alt="Registration Image" className="w-full h-full object-cover" />
                     </div>
                     <div className="md:w-[50%]  lg:w-[50%] ">
                         <div className="text-center">

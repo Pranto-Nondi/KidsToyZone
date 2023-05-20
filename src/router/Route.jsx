@@ -7,6 +7,10 @@ import ErrorPage from "../pages/ErrorPage/ErrorPage"
 import AddToyPage from "../pages/AddToyPage/AddToyPage"
 import MyToys from "../pages/MyToys/MyToys"
 import AllToyPage from "../pages/AllToyPage/AllToyPage"
+import ToyTabDetails from "../pages/Home/ToyTabCategory/ToyTabDetails"
+import PrivateRoute from "./PrivateRoute"
+import SingleToy from "../pages/AllToyPage/SingleToy"
+import MySingleToy from "../pages/MyToys/MySingleToy"
 
 const router = createBrowserRouter([
     {
@@ -37,6 +41,18 @@ const router = createBrowserRouter([
             {
                 path: '/allToys',
                 element: <AllToyPage />
+            },
+            {
+                path: '/toyTabDetails',
+                element: <PrivateRoute><ToyTabDetails /></PrivateRoute>
+            },
+            {
+                path: '/allToySingleInfo',
+                element: <PrivateRoute><SingleToy /></PrivateRoute>
+            },
+            {
+                path: '/mySingleToy/:id',
+                element: <MySingleToy />
             }
 
         ]

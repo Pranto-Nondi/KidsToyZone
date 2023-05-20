@@ -100,12 +100,12 @@ const Register = () => {
     }
 
     return (
-       
+
         <div className='container mb-5 mt-5 mx-auto'>
             <div className="hero bg-base-200">
                 <div className="hero-content min-h-screen flex-col lg:flex-row">
                     <div className="lg:w-[50%]">
-                        <img src="https://midoshriks-school.netlify.app/assets/sing/imgs/login-form-img.png" alt="Registration Image" className="w-full h-full object-cover" />
+                        <img src="https://i.ibb.co/S3zYs9q/log.png" alt="Registration Image" className="w-full h-full object-cover" />
                     </div>
                     <div className="lg:w-[50%]">
                         <div className="text-center ">
@@ -113,7 +113,7 @@ const Register = () => {
                         </div>
 
                         <div className="card flex-shrink-0 w-full max-w-md shadow-2xl bg-base-100">
-                        
+
                             <form onSubmit={handleRegister} className="card-body">
                                 <div className="form-control">
                                     <label className="label">

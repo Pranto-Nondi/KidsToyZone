@@ -1,6 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const MyToysList = ({ toy, index }) => {
+const MyToysList = ({ toy, index, handleDelete }) => {
     const { _id, pictureUrl, name, sellerName, email, subcategory, price, rating, quantity, description } = toy;
 
     return (
@@ -21,14 +22,14 @@ const MyToysList = ({ toy, index }) => {
                 <td>{quantity}</td>
                 <td>{description}</td>
                 <td>
-                    <button className="btn btn-success btn-xs">Update</button>
+                    <Link to={`/mySingleToy/${_id}`}><button className="btn btn-success btn-xs">Update</button></Link>
 
                 </td>
                 <td>
-                    <button className="btn btn-error btn-xs">Delete</button>
+                    <button onClick={() => handleDelete(_id)} className="btn btn-error btn-xs">Delete</button>
 
                 </td>
-               
+
             </tr>
         </>
     );

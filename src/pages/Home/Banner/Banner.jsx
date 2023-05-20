@@ -21,11 +21,11 @@ const Banner = () => {
 
         const slideInterval = () => {
             timer = setTimeout(() => {
-                slides[currentIndex].classList.remove('active');
-                slideButtons[currentIndex].classList?.remove('show');
+                slides[currentIndex]?.classList.remove('active');
+                slideButtons[currentIndex]?.classList?.remove('show');
                 currentIndex = (currentIndex + 1) % slides.length;
-                slides[currentIndex].classList.add('active');
-                slideButtons[currentIndex].classList.add('show');
+                slides[currentIndex]?.classList.add('active');
+                slideButtons[currentIndex]?.classList.add('show');
                 slideInterval();
             }, 5000);
         };
@@ -39,11 +39,11 @@ const Banner = () => {
 
         slideButtons.forEach((button, index) => {
             button.addEventListener('click', () => {
-                slides[currentIndex].classList.remove('active');
-                slideButtons[currentIndex].classList.remove('show');
+                slides[currentIndex]?.classList.remove('active');
+                slideButtons[currentIndex]?.classList.remove('show');
                 currentIndex = index;
-                slides[currentIndex].classList.add('active');
-                slideButtons[currentIndex].classList.add('show');
+                slides[currentIndex]?.classList.add('active');
+                slideButtons[currentIndex]?.classList.add('show');
                 resetTimer();
             });
         });

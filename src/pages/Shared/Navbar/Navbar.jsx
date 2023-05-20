@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { AuthContext } from '../../../povider/AuthProvider';
+import swal from 'sweetalert';
 
 const Navbar = () => {
     const { user, loggedOut, loading } = useContext(AuthContext) || {}
@@ -11,7 +12,7 @@ const Navbar = () => {
     const handelLogOut = () => {
         loggedOut()
             .then(() => {
-
+                swal("Good job!", "LogOut SuccessFull", "success")
             })
             .catch(err => {
 
