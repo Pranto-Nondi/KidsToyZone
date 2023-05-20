@@ -57,7 +57,7 @@ const Banner = () => {
         <div className="flex justify-center items-center">
             <div className="carousel w-full h-[600px]" ref={carouselRef}>
                 <div id="slide1" className="carousel-item relative w-full active">
-                    <img src="https://images.unsplash.com/photo-1596066190600-3af9aadaaea1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=869&q=80" className="w-full" />
+                    <img src="https://i.ibb.co/zRRvMJJ/st.jpg" className="w-full" />
                     <div className="absolute flex justify-center items-center top-0 left-0 w-full h-full bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0)]">
                         <div className="space-y-8 text-center">
                             <h1 className="text-6xl text-white font-semibold">Explore the Wonderful World of Kids' Toys</h1>
@@ -73,7 +73,7 @@ const Banner = () => {
                     </div>
                 </div>
                 <div id="slide2" className="carousel-item relative w-full">
-                    <img src="https://images.unsplash.com/photo-1560859251-d563a49c5e4a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" className="w-full" />
+                    <img src="https://i.ibb.co/MgdgZYH/bt.jpg" className="w-full" />
                     <div className="absolute flex justify-center items-center top-0 left-0 w-full h-full bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0)]">
                         <div className="space-y-8 text-center">
                             <h1 className="text-6xl text-white font-semibold">
@@ -90,7 +90,7 @@ const Banner = () => {
                     </div>
                 </div>
                 <div id="slide3" className="carousel-item relative w-full">
-                    <img src="https://images.unsplash.com/photo-1509781827353-fb95c262fc40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=813&q=80" className="w-full" />
+                    <img src="https://i.ibb.co/bdmP9dm/ut.jpg" className="w-full" />
                     <div className="absolute flex justify-center items-center top-0 left-0 w-full h-full bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0)]">
                         <div className="space-y-8 text-center">
                             <h1 className="text-6xl text-white font-semibold">
@@ -107,7 +107,7 @@ const Banner = () => {
                     </div>
                 </div>
                 <div id="slide4" className="carousel-item relative w-full">
-                    <img src="https://images.unsplash.com/photo-1505692069463-edfaea445fcd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" className="w-full" />
+                    <img src="https://i.ibb.co/b3kSZdH/dt.jpg" className="w-full" />
                     <div className="absolute flex justify-center items-center top-0 left-0 w-full h-full bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0)]">
                         <div className="space-y-8 text-center">
                             <h1 className="text-6xl text-white font-semibold">

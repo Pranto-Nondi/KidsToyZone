@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 
 const GalleryCard = ({ toy }) => {
-    const { id, name, img, price } = toy;
+    const { id, name, image, price } = toy;
     const [isHovered, setIsHovered] = useState(false);
 
     useEffect(() => {
@@ -21,7 +21,7 @@ const GalleryCard = ({ toy }) => {
             onMouseEnter={handleHover}
             onMouseLeave={handleHover}
         >
-            <img src="https://m.media-amazon.com/images/I/71w5Z4THfgL._AC_SL1000_.jpg" alt="Toy" className="object-cover w-full h-52" />
+            <img src={image} alt="Toy" className="object-cover w-full h-52" />
             <div
                 className={`absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 ease-in-out ${isHovered ? "opacity-100" : ""
                     }`}
