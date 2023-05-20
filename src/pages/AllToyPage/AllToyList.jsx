@@ -20,7 +20,7 @@ const AllToyList = ({ singleToy, index }) => {
                 <td>${price}</td>
                 <td>{quantity}</td>
                 <td>
-                    <Link to='/allToySingleInfo'><button className="btn btn-info btn-xs">View Details</button></Link>
+                    <Link to={`/allToySingleInfo/${_id}`}><button className="btn btn-info btn-xs">View Details</button></Link>
 
                 </td>
 
