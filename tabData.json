@@ -3,13 +3,13 @@
         "categoryName": "Vehicles",
         "toys": [
             {
-                "name": "Toy cars",
+                "name": "Toy car",
                 "price": 9.99,
                 "rating": 4.5,
                 "image": "https://i.ibb.co/cNc9Mbg/t1.jpg"
             },
             {
-                "name": "Toy trains",
+                "name": "Toy train",
                 "price": 14.99,
                 "rating": 4.2,
                 "image": "https://i.ibb.co/Kq5vCmv/train1.jpg"
@@ -37,7 +37,7 @@
         "categoryName": "Educational Toys",
         "toys": [
             {
-                "name": "Alphabet blocks",
+                "name": "Alphabet block",
                 "price": 19.99,
                 "rating": 4.7,
                 "image": "https://i.ibb.co/60PL0CD/alp1.jpg"

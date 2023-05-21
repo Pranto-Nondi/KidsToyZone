@@ -32,12 +32,13 @@ const SingleToy = () => {
     }
     return (
 
-        <div className="flex items-center justify-center h-screen">
-            <div className="max-w-6xl w-full bg-white shadow-lg rounded-lg overflow-hidden flex">
+
+        <div className="flex items-center justify-center h-screen bg-gray-100">
+            <div className="max-w-6xl w-full bg-white shadow-xl rounded-lg overflow-hidden flex">
                 <div className="card-body">
                     <img className="w-full h-full object-cover" src={pictureUrl} alt="Album" />
                 </div>
-                <div className="p-8 w-2/3">
+                <div className="p-8 w-2/3 shadow-md shadow-lg-top">
                     <h2 className="text-2xl font-bold mb-4">Toy Name: {name}</h2>
                     <h2 className="text-2xl font-bold mb-4">Seller Name: {sellerName}</h2>
                     <h2 className="text-lg mb-4">Seller Email: {email}</h2>
@@ -46,13 +47,17 @@ const SingleToy = () => {
                     <h2 className="text-md mb-4">Quantity: {quantity}</h2>
                     <h2 className="text-md mb-4">Description: {description}</h2>
                     <div className="flex justify-start mt-6">
-                        <Link to='/allToys'><button className="px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white rounded-lg">
-                            Go Back
-                        </button></Link>
+                        <Link to="/allToys">
+                            <button className="px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white rounded-lg">
+                                Go Back
+                            </button>
+                        </Link>
                     </div>
                 </div>
             </div>
         </div>
+
+
 
 
 

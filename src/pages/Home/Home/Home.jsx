@@ -11,6 +11,7 @@ const Home = () => {
             <Banner></Banner>
             <Gallery></Gallery>
             <ToyTabCategory></ToyTabCategory>
+           
         </div>
     );
 };

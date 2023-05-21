@@ -11,6 +11,8 @@ import ToyTabDetails from "../pages/Home/ToyTabCategory/ToyTabDetails"
 import PrivateRoute from "./PrivateRoute"
 import SingleToy from "../pages/AllToyPage/SingleToy"
 import MySingleToy from "../pages/MyToys/MySingleToy"
+import Blogs from "../pages/Blogs/Blogs"
+
 
 const router = createBrowserRouter([
     {
@@ -53,6 +55,10 @@ const router = createBrowserRouter([
             {
                 path: '/mySingleToy/:id',
                 element: <MySingleToy />
+            },
+            {
+                path: '/blogs',
+                element: <Blogs />
             }
 
         ]
