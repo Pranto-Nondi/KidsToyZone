@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from "react";
 import AllToyList from "./AllToyList";
 import { RotatingLines } from "react-loader-spinner";
@@ -11,10 +10,16 @@ const AllToyPage = () => {
 
     useEffect(() => {
         setLoader(true);
-        fetch(`https://kid-toy-site-server.vercel.app/allToys?limit=${limit}`)
+        fetchToys();
+
+    }, [limit]);
+
+    const fetchToys = () => {
+        const url = `https://kid-toy-site-server.vercel.app/allToys?limit=${limit}`;
+        fetch(url)
             .then((res) => res.json())
             .then((data) => {
-                console.log("Response data:", data)
+                console.log("Response data:", data);
                 setToyCollection(data);
                 setLoader(false);
             })
@@ -22,7 +27,7 @@ const AllToyPage = () => {
                 console.error("Error fetching toys:", error);
                 setLoader(false);
             });
-    }, []);
+    };
 
     const handleSearch = () => {
         fetch(`https://kid-toy-site-server.vercel.app/allToys/${searchText}`)
@@ -36,7 +41,9 @@ const AllToyPage = () => {
             });
     };
 
-
+    const handleSeeAll = () => {
+        setLimit(9999);
+    };
 
     if (loader) {
         return (
@@ -92,9 +99,18 @@ const AllToyPage = () => {
                     </table>
                 </div>
             </div>
+
+            {limit === 20 && (
+                <div className="text-center mt-4">
+                    <button className="btn btn-primary" onClick={handleSeeAll}>
+                        See All
+                    </button>
+                </div>
+            )}
         </div>
     );
 };
 
 export default AllToyPage;
+
 
