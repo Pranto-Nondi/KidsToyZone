@@ -102,7 +102,7 @@ const Register = () => {
     return (
 
         <div className='container mb-5 mt-5 mx-auto'>
-            <div className="hero bg-base-200">
+            <div className="hero bg-gray-200">
                 <div className="hero-content min-h-screen flex-col lg:flex-row">
                     <div className="lg:w-[50%]">
                         <img src="https://i.ibb.co/S3zYs9q/log.png" alt="Registration Image" className="w-full h-full object-cover" />
@@ -158,6 +158,7 @@ const Register = () => {
                 </div>
             </div>
         </div>
+
 
     );
 };

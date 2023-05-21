@@ -33,12 +33,33 @@ const ToyTabDetails = () => {
     }
     return (
 
-        <div className="flex items-center justify-center h-screen bg-gray-100">
-            <div className="max-w-5xl w-full text-gray-700 bg-white shadow rounded-lg overflow-hidden flex">
+        // <div className="flex items-center justify-center h-screen bg-gray-100">
+        //     <div className="max-w-5xl w-full text-gray-700 bg-white shadow rounded-lg overflow-hidden flex">
+        //         <div className="card-body">
+        //             <img className="w-full h-full object-cover" src={pictureUrl} alt="Album" />
+        //         </div>
+        //         <div className="p-8 w-2/3">
+        //             <h2 className="text-xl font-bold mb-4">Toy Name: {name}</h2>
+        //             <h2 className="text-xl font-bold mb-4">Seller Name: {sellerName}</h2>
+        //             <h2 className="text-lg mb-4">Seller Email: {email}</h2>
+        //             <h2 className="text-md mb-4">Price: $ {price}</h2>
+        //             <h2 className="text-md mb-4">Rating: {rating}</h2>
+        //             <h2 className="text-md mb-4">Quantity: {quantity}</h2>
+        //             <h2 className="text-md mb-4">Description: {description}</h2>
+        //             <div className="flex justify-start mt-6">
+        //                 <Link to="/"><button className="px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white rounded-lg">
+        //                     Go Back
+        //                 </button></Link>
+        //             </div>
+        //         </div>
+        //     </div>
+        // </div>
+        <div className="flex items-center justify-center min-h-screen bg-gray-100">
+            <div className="max-w-5xl w-full text-gray-700 bg-white shadow rounded-lg overflow-hidden flex flex-col sm:flex-row">
                 <div className="card-body">
                     <img className="w-full h-full object-cover" src={pictureUrl} alt="Album" />
                 </div>
-                <div className="p-8 w-2/3">
+                <div className="p-8 w-full sm:w-2/3">
                     <h2 className="text-xl font-bold mb-4">Toy Name: {name}</h2>
                     <h2 className="text-xl font-bold mb-4">Seller Name: {sellerName}</h2>
                     <h2 className="text-lg mb-4">Seller Email: {email}</h2>
@@ -47,13 +68,16 @@ const ToyTabDetails = () => {
                     <h2 className="text-md mb-4">Quantity: {quantity}</h2>
                     <h2 className="text-md mb-4">Description: {description}</h2>
                     <div className="flex justify-start mt-6">
-                        <Link to="/"><button className="px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white rounded-lg">
-                            Go Back
-                        </button></Link>
+                        <Link to="/">
+                            <button className="px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white rounded-lg">
+                                Go Back
+                            </button>
+                        </Link>
                     </div>
                 </div>
             </div>
         </div>
+
 
     );
 };

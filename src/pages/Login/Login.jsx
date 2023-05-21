@@ -89,18 +89,19 @@ const Login = () => {
 
     return (
 
-        <div className='container mb-5 mt-5 mx-auto'>
-            <div className="hero bg-base-200">
-                <div className="hero-content min-h-screen flex-col lg:flex-row">
+       
+        <div className="container mb-5 mt-5 mx-auto">
+            <div className="hero bg-gray-100">
+                <div className="hero-content">
                     <div className="md:w-[50%] lg:w-[50%]">
                         <img src="https://i.ibb.co/S3zYs9q/log.png" alt="Registration Image" className="w-full h-full object-cover" />
                     </div>
-                    <div className="md:w-[50%]  lg:w-[50%] ">
+                    <div className="md:w-[50%] lg:w-[50%]">
                         <div className="text-center">
                             <h1 className="text-5xl mb-2 font-semibold">Login now</h1>
                         </div>
 
-                        <div className="card flex-shrink-0 w-full max-w-screen-md shadow-2xl bg-base-100">
+                        <div className="card w-full shadow-2xl bg-base-100">
                             <form onSubmit={handelSignIn} className="card-body">
                                 <div className="form-control">
                                     <label htmlFor="email" className="label">
@@ -133,7 +134,6 @@ const Login = () => {
                                     {passwordError && (
                                         <span className="text-red-500">{passwordError}</span>
                                     )}
-
                                 </div>
                                 <div className="form-control mt-6">
                                     <button className="btn btn-primary">Login</button>
@@ -156,10 +156,10 @@ const Login = () => {
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
+
 
 
     );

@@ -75,11 +75,11 @@ const Navbar = () => {
                     <Link to="/">
                         <img
                             className="w-28"
-                            src="https://static.vecteezy.com/system/resources/thumbnails/004/141/569/small/funny-3d-baby-colorful-cubes-with-letters-kids-zone-playroom-for-children-logo-template-play-area-in-entertainment-center-illustration-on-white-background-free-vector.jpg"
+                            src="https://i.ibb.co/Bq3kWfx/logo.jpg"
                             alt="carsDoctorImg"
                         />
                     </Link>
-                    <Link>
+                    <Link to='/'>
                         <p className="btn btn-ghost normal-case text-2xl">KidzToyZone</p>
                     </Link>
                 </div>
