@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../povider/AuthProvider';
 import swal from 'sweetalert';
+import useTitle from '../../hooks/useTitle';
 
 
 const Login = () => {
@@ -14,6 +15,7 @@ const Login = () => {
     const location = useLocation()
     const from = location.state?.from?.pathname || "/";
     const { logInUser, setLoading, googleSignIn, githubSignIn } = useContext(AuthContext)
+    useTitle(`Login`)
     const handelSignIn = (e) => {
         e.preventDefault()
         setError('')

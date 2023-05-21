@@ -1,6 +1,7 @@
 import React, { useContext, useRef, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../povider/AuthProvider';
+import useTitle from '../../hooks/useTitle';
 
 
 const Register = () => {
@@ -13,6 +14,7 @@ const Register = () => {
     const nameRef = useRef()
     const urlRef = useRef()
     const { user, createUser, loggedOut, setUpdateProfile } = useContext(AuthContext)
+    useTitle(`Register `)
     const handleRegister = e => {
         e.preventDefault();
         setError('')

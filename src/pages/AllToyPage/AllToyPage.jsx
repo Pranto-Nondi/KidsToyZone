@@ -1,13 +1,15 @@
 import { useEffect, useState } from "react";
 import AllToyList from "./AllToyList";
 import { RotatingLines } from "react-loader-spinner";
+import useTitle from "../../hooks/useTitle";
 
 const AllToyPage = () => {
+
     const [toyCollection, setToyCollection] = useState([]);
     const [loader, setLoader] = useState(false);
     const [searchText, setSearchText] = useState("");
     const [limit, setLimit] = useState(20);
-
+    useTitle(`All Toys`)
     useEffect(() => {
         setLoader(true);
         fetchToys();

@@ -2,11 +2,12 @@
 import React, { useContext, useState } from 'react';
 import { AuthContext } from '../../povider/AuthProvider';
 import swal from 'sweetalert';
+import useTitle from '../../hooks/useTitle';
 const AddToyPage = () => {
     const { user } = useContext(AuthContext);
-
     const defaultSellerName = user?.displayName || '';
     const defaultEmail = user?.email || '';
+    useTitle(`Add Toy`)
 
     const [toyData, setToyData] = useState({
         pictureUrl: '',

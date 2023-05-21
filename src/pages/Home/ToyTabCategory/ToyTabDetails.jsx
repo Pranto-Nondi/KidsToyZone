@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { RotatingLines } from 'react-loader-spinner';
 import { Link, useParams } from 'react-router-dom';
+import useTitle from '../../../hooks/useTitle';
 
 const ToyTabDetails = () => {
     const [singleToy, setSingleToy] = useState([])
     const { id } = useParams();
     const { _id, pictureUrl, name, sellerName, email, price, rating, quantity, description } = singleToy || {};
     const [loader, setLoader] = useState(false);
+    useTitle(`Toy Tab Details`)
 
     useEffect(() => {
         setLoader(true)

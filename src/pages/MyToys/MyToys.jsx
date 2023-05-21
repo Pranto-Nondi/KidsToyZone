@@ -118,6 +118,7 @@ import { RotatingLines } from 'react-loader-spinner';
 import swal from 'sweetalert';
 import { AuthContext } from '../../povider/AuthProvider';
 import MyToysList from './MyToysLIst';
+import useTitle from '../../hooks/useTitle';
 
 const MyToys = () => {
     const [loader, setLoader] = useState(false);
@@ -126,6 +127,7 @@ const MyToys = () => {
     const [sortOrder, setSortOrder] = useState('ascending');
     const navigate = useNavigate();
     const [userEmail, setUserEmail] = useState('');
+    useTitle(`My Toys`)
 
 
     useEffect(() => {

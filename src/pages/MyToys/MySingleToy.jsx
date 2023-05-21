@@ -2,9 +2,11 @@ import React, { useContext, useState } from 'react';
 import { AuthContext } from '../../povider/AuthProvider';
 import { useParams } from 'react-router-dom';
 import swal from 'sweetalert';
+import useTitle from '../../hooks/useTitle';
 const MySingleToy = () => {
     const { user } = useContext(AuthContext);
     const { id } = useParams();
+    useTitle(`My Single Toy`)
 
 
     const [toyData, setToyData] = useState({
