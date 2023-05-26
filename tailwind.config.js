@@ -18,16 +18,12 @@ export default {
           warning: "#DEAF17",
           error: "#FB6041",
         },
-        boxShadow: {
-          'md': '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
-          'lg-top': '0 -6px 10px -5px rgba(0, 0, 0, 0.1)',
-        },
       },
       "dark",
       "cupcake",
       "garden",
       "light",
-      "night",
+      "night"
     ],
   },
   plugins: [require("daisyui")],
