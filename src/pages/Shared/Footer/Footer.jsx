@@ -7,7 +7,7 @@ const Footer = () => {
             <footer className="footer p-10 ">
                 <div>
                     <img className='rounded w-[15%]' src="https://i.ibb.co/SN2vLXf/kl.png" alt="" />
-                    <p>KidsToyZone<br />Production and Selling Kids World's Best Toys</p>
+                    <p>Wonder Toy<br />Production and Selling Kids World's Best Toys</p>
                 </div>
                 <div>
                     <span className="footer-title">Contact</span>
@@ -32,7 +32,7 @@ const Footer = () => {
 
             </footer>
             <div className="text-sm text-center pb-5">
-                &copy; {new Date().getFullYear()} Wonder Toys. All rights reserved.
+                &copy; {new Date().getFullYear()} Wonder Toy. All rights reserved.
             </div>
         </div>
     );
