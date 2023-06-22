@@ -1,6 +1,6 @@
-# KidzToyZone Site
+# Wonder Toy Site
 
-This Website is a KidzToyZone website with client and server-side implementation using MongoDB as the database.
+This Website is a Wonder Toy website with client and server-side implementation using MongoDB as the database.
 
 ## Live Link
 

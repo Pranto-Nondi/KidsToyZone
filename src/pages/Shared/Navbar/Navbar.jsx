@@ -80,7 +80,7 @@ const Navbar = () => {
                         />
                     </Link>
                     <Link to='/'>
-                        <p className="btn btn-ghost normal-case text-2xl">KidzToyZone</p>
+                        <p className="btn btn-ghost normal-case text-2xl">Wonder Toys</p>
                     </Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
